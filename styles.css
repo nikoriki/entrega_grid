@@ -1,0 +1,136 @@
+:root {
+    --bg-color: #f7f7f7;
+    --accent-color: #2bc5cd;
+    --highlight-color: #ff693d;
+    --text-color: #151515;
+    --radius: 20px;
+    --gap: 24px;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    padding: 30px;
+    color: var(--text-color);
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+  }
+  
+  .card {
+    background: white;
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .card h1,
+  .card h2,
+  .card h3 {
+    margin-bottom: 12px;
+  }
+  
+  .card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .header {
+    grid-column: 1 / 2;
+  }
+  
+  .center-text {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    grid-column: 2 / 3;
+    border: 2px solid var(--accent-color);
+  }
+  
+  .footer {
+    grid-column: 2 / 4;
+    background-color: var(--highlight-color);
+    color: white;
+  }
+  
+  .footer button {
+    margin-top: 20px;
+    background-color: white;
+    color: var(--highlight-color);
+    border: none;
+    padding: 12px 24px;
+    border-radius: var(--radius);
+    font-weight: bold;
+    cursor: pointer;
+    align-self: start;
+  }
+  
+  .img-box {
+    background-size: cover;
+    background-position: center;
+    min-height: 200px;
+    border-radius: var(--radius);
+  }
+  
+  .img1 {
+    background-image: url('https://images03.nicepage.com/c461c07a441a5d220e8feb1a/d8ce469044b958508f4bdbab/blueschoolbackpackwithessentialsupplies_232148207678.jpg');
+  }
+  
+  .img2 {
+    background-image: url('https://images03.nicepage.com/c461c07a441a5d220e8feb1a/9e4ce16148dd5cbeb1065410/89f80abe-6acd-d8dc-a341-3e571206975b.jpg');
+  }
+  
+  .img3 {
+    background-image: url('https://images03.nicepage.com/c461c07a441a5d220e8feb1a/773a5aa425b1502aaac14708/f2b45624-c8f6-3aa0-0ee4-58adda3c89b0.jpg');
+  }
+  
+  .img4 {
+    background-image: url('https://images03.nicepage.com/c461c07a441a5d220e8feb1a/89993ff69c3e5244ad2bf1ba/blondestudentgirlissmilingholdingfoldernotebookherhandsuniversitybackground_101969664.jpg');
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .header,
+    .center-text,
+    .footer,
+    .img1,
+    .img2,
+    .img3,
+    .img4 {
+      grid-column: auto;
+    }
+  
+    .center-text {
+      border-width: 1px;
+      padding: 16px;
+    }
+  
+    .footer {
+      padding: 20px 16px;
+      text-align: left;
+    }
+  
+    .footer button {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  
